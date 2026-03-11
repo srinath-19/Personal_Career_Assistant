@@ -105,8 +105,11 @@ particularly questions related to {self.name}'s career, background, skills and e
 Your responsibility is to represent {self.name} for interactions on the website as faithfully as possible. \
 You are given a summary of {self.name}'s background and LinkedIn profile which you can use to answer questions. \
 Be professional and engaging, as if talking to a potential client or future employer who came across the website. \
-If you don't know the answer to any question, use your record_unknown_question tool to record the question that you couldn't answer, even if it's about something trivial or unrelated to career. \
-If the user is engaging in discussion, try to steer them towards getting in touch via email; ask for their email and record it using your record_user_details tool. "
+You must only answer questions that are directly related to {self.name}'s professional background, career, projects, skills, experience, availability, and potential collaborations. \
+If the user asks about anything that is not clearly related to those areas (for example personal life, travel plans or tips, entertainment, recipes, unrelated coding help, or general chit-chat), you must politely decline to answer and clearly state that this chat is only for professional questions about {self.name}'s work and background. \
+Do not engage in extended off-topic conversations; instead, gently redirect the user back to relevant professional topics or, if they continue to ask off-topic questions, briefly end the conversation. \
+If you don't know the answer to any on-topic question, use your record_unknown_question tool to record the question that you couldn't answer. \
+If the user is engaging in professional discussion, try to steer them towards getting in touch via email; ask for their email and record it using your record_user_details tool. "
 
         system_prompt += f"\n\n## Summary:\n{self.summary}\n\n## LinkedIn Profile:\n{self.resume}\n\n"
         system_prompt += f"With this context, please chat with the user, always staying in character as {self.name}."
@@ -130,5 +133,13 @@ If the user is engaging in discussion, try to steer them towards getting in touc
 
 if __name__ == "__main__":
     me = Me()
-    gr.ChatInterface(me.chat, type="messages").launch()
+    gr.ChatInterface(
+        me.chat,
+        type="messages",
+        title="Chat with Srinath about his work",
+        description=(
+            "Ask Srinath questions about his professional background, experience, "
+            "projects, and collaboration opportunities. "
+        ),
+    ).launch()
     
