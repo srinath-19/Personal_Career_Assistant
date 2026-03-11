@@ -1,0 +1,18 @@
+Pursuing a Master of Science in Computer Science at the University
+of Colorado Boulder, I am an AI Engineer at Inovonics, where
+I contribute to developing an innovative full-stack AI system for
+converting 2D floor plans into structured digital building maps. My
+work focuses on using YOLOv12-OBB for structural detection,
+integrating a robust backend, task queues, databases, and front-
+end frameworks to support applications in safety, automation, and
+sensing for senior living and commercial spaces.
+My professional interests lie in applying large language models
+(LLMs), MLOps, and retrieval-augmented generation (RAG)
+technologies. I value creating efficient, reliable, and scalable
+systems, driving impactful solutions through collaboration and
+iteration. Currently, I am focused on advancing technologies at the
+intersection of AI and MLOps, which enable production-ready LLM
+applications through robust data pipelines, evaluation, deployment,
+and monitoring. I am especially interested in building end-to-end
+systems that improve retrieval quality, reduce latency and cost, and
+deliver measurable impact in real-world products.
